@@ -18,16 +18,17 @@ export const files = {
   "package.json": {
     file: {
       contents: `
-                "name": "example-app",
-                "type": "module",
-                "dependencies": {
-                    "express": "latest",
-                    "nodemon": "latest"
-                },
-                "scripts": {
-                    "start": "nodemon --watch './' index.js"
-                }
-            }
+                {
+  "name": "example-app",
+  "type": "module",
+  "dependencies": {
+    "express": "latest",
+    "nodemon": "latest"
+  },
+  "scripts": {
+    "start": "nodemon --watch './' index.js"
+  }
+}
             
             `,
     },
