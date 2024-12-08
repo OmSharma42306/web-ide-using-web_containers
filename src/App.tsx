@@ -7,6 +7,8 @@ function App() {
 let webContainerInstance ; 
 
 window.addEventListener('load',async () => {
+    textareaE1.value = files['index.js'].file.contents;
+
     webContainerInstance = await WebContainer.boot();
 
     await webContainerInstance.mount(files);
@@ -14,11 +16,12 @@ window.addEventListener('load',async () => {
     // so i am reading a file , like to confirm that the files were mounted into containers.
     const packageJson = await webContainerInstance.fs.readFile('package.json','utf-8');
     console.log(packageJson);
+    webContainerInstance.spawn('npm',['install']);
 })
 
   return (
     <>
-     
+     <textarea name="textareaE1" id="textareaE1"></textarea>
     </>
   )
 }
