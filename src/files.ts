@@ -1,7 +1,7 @@
 export const files = {
-    'index.js':{
-        file:{
-            contents:`
+  "index.js": {
+    file: {
+      contents: `
             import express from "express";
             const app = express();
             const port = 3111;
@@ -12,24 +12,24 @@ export const files = {
             app.listen(port,()=>{
             console.log(\` Server is Running on PORT : \${port}\`)})
             })
-            `
-        },
+            `,
     },
-    'package.json':{
-        file:{
-            contents:`
-                "name": "example-app",
-  "type": "module",
-  "dependencies": {
-    "express": "latest",
-    "nodemon": "latest"
   },
-  "scripts": {
-    "start": "nodemon --watch './' index.js"
-  }
-}
+  "package.json": {
+    file: {
+      contents: `
+                "name": "example-app",
+                "type": "module",
+                "dependencies": {
+                    "express": "latest",
+                    "nodemon": "latest"
+                },
+                "scripts": {
+                    "start": "nodemon --watch './' index.js"
+                }
+            }
             
-            `
-        },
+            `,
     },
+  },
 };
